@@ -153,8 +153,19 @@ ul { list-style: none; }
   font-weight: 600;
   letter-spacing: 0.15em;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .nav-logo span { color: var(--gold); }
+
+.nav-logo-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
 
 .nav-links {
   display: flex;
@@ -853,6 +864,21 @@ blockquote {
   gap: 32px;
 }
 
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.footer-logo-img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
 .footer-logo {
   font-family: var(--serif);
   font-size: 1.5rem;
@@ -860,7 +886,7 @@ blockquote {
   letter-spacing: 0.15em;
   color: var(--white);
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 0;
 }
 .footer-tagline {
   font-size: 0.7rem;
