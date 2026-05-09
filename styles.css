@@ -540,11 +540,42 @@ ul { list-style: none; }
   color: var(--text-muted);
 }
 
+/* Menu panel note */
+.menu-panel-note {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding: 0 0 28px;
+  border-bottom: 1px solid rgba(170,138,76,0.12);
+  margin-bottom: 4px;
+}
+
+/* Review link */
+.review-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(170,138,76,0.3);
+  padding-bottom: 2px;
+  transition: color var(--transition), border-color var(--transition);
+}
+.review-link:hover {
+  color: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
 .menu-footer {
   max-width: 1280px;
   margin: 64px auto 0;
   padding: 0 40px;
 }
+
+
 
 
 /* ============================================================
