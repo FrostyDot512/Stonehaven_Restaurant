@@ -4,11 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stonehaven — Restaurant & Winery</title>
+  <meta name="description" content="Stonehaven Restaurant & Winery — a sanctuary of refined cuisine and exceptional wine in Kololo, Kampala." />
+
+  <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Cinzel (chiselled roman for brand name) + Cormorant Garamond (elegant serif body) + Montserrat (clean UI) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="icon" type="image/x-icon" href="logo.png" />
 </head>
 <body>
 
@@ -17,16 +23,18 @@
   ============================================================ -->
   <nav id="navbar">
     <div class="nav-inner">
+
+      <!-- Brand: top-left Stonehaven name in Cinzel -->
       <a href="#hero" class="nav-logo">
         <img src="logo.png" alt="Stonehaven logo" class="nav-logo-img" />
-        STONEHAVEN
+        <span class="nav-brand-name">Stonehaven</span>
       </a>
 
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#reserve">Reserve</a></li>
+        <li><a href="#image-strip">Gallery</a></li>
+        <li><a href="#visit">Visit</a></li>
         <li><a href="#reserve" class="nav-cta">Book a Table</a></li>
       </ul>
 
@@ -41,20 +49,35 @@
 
 
   <!-- ============================================================
-       HERO
+       HERO — Image Slider
   ============================================================ -->
   <section id="hero">
-    <div class="hero-bg">
-      <img
-        src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-1122x800.png"
-        alt="Stonehaven Restaurant & Winery, Kampala"
-        class="hero-img"
-      />
+
+    <!-- Slider background -->
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image: url('ambiance_.png')"></div>
+      <div class="hero-slide" style="background-image: url('BBQ.png')"></div>
+      <div class="hero-slide" style="background-image: url('breakfast.png')"></div>
+      <div class="hero-slide" style="background-image: url('Chicken.png')"></div>
+      <div class="hero-slide" style="background-image: url('Lunch_.png')"></div>
+      <div class="hero-slide" style="background-image: url('Mash_up.png')"></div>
+      <div class="hero-slide" style="background-image: url('MoreFood.png')"></div>
       <div class="hero-overlay"></div>
     </div>
 
+    <!-- Slider dots -->
+    <div class="hero-dots" id="heroDots">
+      <button class="hero-dot active" aria-label="Slide 1"></button>
+      <button class="hero-dot" aria-label="Slide 2"></button>
+      <button class="hero-dot" aria-label="Slide 3"></button>
+      <button class="hero-dot" aria-label="Slide 4"></button>
+      <button class="hero-dot" aria-label="Slide 5"></button>
+      <button class="hero-dot" aria-label="Slide 6"></button>
+      <button class="hero-dot" aria-label="Slide 7"></button>
+    </div>
+
     <div class="hero-content">
-      <p class="hero-eyebrow reveal">Kampala · Est. 2018</p>
+      <p class="hero-eyebrow reveal">Kampala · Kololo · Est. 2021</p>
       <h1 class="hero-title reveal">
         <em>Where Elegance</em><br />Meets Taste
       </h1>
@@ -80,43 +103,49 @@
 
 
   <!-- ============================================================
-       ABOUT
+       ABOUT — Our Story
   ============================================================ -->
   <section id="about" class="section-about">
-    <!-- Background accent text -->
-    <span class="bg-text">SINCE 2018</span>
+    <span class="bg-text">STONEHAVEN</span>
 
     <div class="about-grid">
 
-      <!-- Image column -->
+      <!-- Image column — main + decorative layered secondary -->
       <div class="about-img-wrap reveal">
         <img
-          src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-37.png"
-          alt="Stonehaven wine cellar, Kampala"
+          src="ambiance_.png"
+          alt="Stonehaven dining terrace"
           class="about-img-main"
         />
-        <!-- Floating card -->
-        <div class="about-card">
-          <span class="about-card-num">12+</span>
-          <span class="about-card-label">Years of Excellence</span>
+        <!-- Decorative secondary image (layered corner effect) -->
+        <div class="about-img-secondary">
+          <img
+            src="cocktail_.png"
+            alt="Stonehaven crafted cocktail"
+          />
+        </div>
+        <!-- Founded badge instead of 12 years -->
+        <div class="about-founded">
+          <span class="about-founded-year">2021</span>
+          <span class="about-founded-label">Founded in Kampala</span>
         </div>
       </div>
 
-      <!-- Text column (offset) -->
+      <!-- Text column -->
       <div class="about-text reveal">
         <p class="eyebrow">Our Story</p>
         <h2 class="section-title">
           Crafted for Those<br />Who Savour Life
         </h2>
         <p class="body-text">
-          Nestled in the heart of Kampala, Stonehaven was born from a singular obsession:
+          Nestled in the heart of Kololo, Stonehaven was born from a singular obsession:
           the belief that a truly extraordinary meal is indistinguishable from art.
           Our chefs draw from East African terroir, weaving indigenous ingredients
           into plates that feel both timeless and urgent.
         </p>
         <p class="body-text">
-          Our winery curates over 300 labels — from the sun-baked valleys of South Africa
-          to the fog-draped hillsides of Burgundy — each bottle selected to companion
+          Our winery curates an exceptional selection of labels — from the sun-baked valleys of South Africa
+          to the fog-draped hillsides of Burgundy — each bottle chosen to companion
           the season's finest produce.
         </p>
         <div class="about-stats">
@@ -141,477 +170,195 @@
 
 
   <!-- ============================================================
-       MENU
+       MENU PREVIEW — Appetisers / Starters only + CTA to full menu
   ============================================================ -->
   <section id="menu" class="section-menu">
     <div class="menu-header reveal">
-      <p class="eyebrow">Seasonal Offerings</p>
+      <p class="eyebrow eyebrow--light">A Taste of What Awaits</p>
       <h2 class="section-title section-title--light">The Menu</h2>
       <p class="menu-intro">
         Our kitchen changes with the land. Every dish is a conversation between
-        tradition and the present harvest.
+        tradition and the present harvest. Below is a glimpse — the full experience awaits.
       </p>
     </div>
 
-    <!-- Category tabs -->
-    <div class="menu-tabs reveal">
-      <button class="tab active" data-tab="breakfast">Breakfast</button>
-      <button class="tab" data-tab="starters">Starters</button>
-      <button class="tab" data-tab="mains">Main Courses</button>
-      <button class="tab" data-tab="salads">Salads</button>
-      <button class="tab" data-tab="wines">Wines</button>
-      <button class="tab" data-tab="desserts">Desserts</button>
+    <!-- Preview: Starters only -->
+    <div class="menu-preview-wrap reveal">
+      <p class="menu-panel-note">Starters — a selection from our kitchen</p>
+      <div class="menu-cols">
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Butter Chicken Meatballs</span>
+            <span class="menu-item-price">UGX 30,000</span>
+          </div>
+          <p class="menu-item-desc">Ground chicken, rich tomato gravy, fresh coriander leaves, served with warm flatbread</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Balsamic Beef Crostini</span>
+            <span class="menu-item-price">UGX 30,000</span>
+          </div>
+          <p class="menu-item-desc">Toasted bread, sliced beef fillet, herbed mozzarella, rocket leaves, aged balsamic reduction</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Calamari Fritti</span>
+            <span class="menu-item-price">UGX 38,000</span>
+          </div>
+          <p class="menu-item-desc">Lightly breaded squid rings, lemon aioli, sriracha dipping sauce, fresh lemon wedge</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Chicken Wings</span>
+            <span class="menu-item-price">UGX 35,000</span>
+          </div>
+          <p class="menu-item-desc">Crispy fried wings tossed in your choice of sauce: buffalo, honey garlic, or BBQ, with house dipping sauce</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Soup of the Day</span>
+            <span class="menu-item-price">UGX 22,000</span>
+          </div>
+          <p class="menu-item-desc">Ask your server for today's seasonal selection, served with crusty artisan bread and butter</p>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-item-top">
+            <span class="menu-item-name">Bruschetta Al Pomodoro</span>
+            <span class="menu-item-price">UGX 24,000</span>
+          </div>
+          <p class="menu-item-desc">Grilled ciabatta, vine-ripened tomatoes, fresh basil, garlic, extra-virgin olive oil, Maldon salt</p>
+        </div>
+
+      </div><!-- /menu-cols -->
+    </div><!-- /menu-preview-wrap -->
+
+    <!-- Full menu CTA -->
+    <div class="menu-cta reveal">
+      <p class="menu-cta-text">Breakfast · Mains · Salads · Wines · Desserts &amp; more</p>
+      <a href="menu.html" class="btn btn-solid menu-cta-btn">View Full Menu</a>
     </div>
 
-    <!-- Menu panels -->
-    <div class="menu-panels">
-
-      <!-- Breakfast -->
-      <div class="menu-panel active" id="tab-breakfast">
-        <p class="menu-panel-note reveal">Served daily · 8:00 – 12:00</p>
-        <div class="menu-cols">
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Full English Breakfast</span>
-              <span class="menu-item-price">UGX 38,000</span>
-            </div>
-            <p class="menu-item-desc">Eggs your way, grilled bacon, pork sausage, sautéed mushrooms, roasted tomato, baked beans, toast</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Eggs Benedict</span>
-              <span class="menu-item-price">UGX 32,000</span>
-            </div>
-            <p class="menu-item-desc">Poached eggs, Canadian bacon, toasted English muffin, house hollandaise sauce</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Avocado Toast</span>
-              <span class="menu-item-price">UGX 28,000</span>
-            </div>
-            <p class="menu-item-desc">Smashed avocado, poached egg, cherry tomatoes, micro herbs, chilli flakes, sourdough</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">French Toast</span>
-              <span class="menu-item-price">UGX 26,000</span>
-            </div>
-            <p class="menu-item-desc">Thick-cut brioche, maple syrup, whipped cream, fresh berries, icing sugar</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Pancake Stack</span>
-              <span class="menu-item-price">UGX 24,000</span>
-            </div>
-            <p class="menu-item-desc">Fluffy buttermilk pancakes, mixed berry compote, honey butter, warm maple syrup</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Balsamic Beef Crostini</span>
-              <span class="menu-item-price">UGX 30,000</span>
-            </div>
-            <p class="menu-item-desc">Toasted bread, beef fillet, herbed mozzarella, rocket leaves — a light morning indulgence</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Starters -->
-      <div class="menu-panel" id="tab-starters">
-        <div class="menu-cols">
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Butter Chicken Meatballs</span>
-              <span class="menu-item-price">UGX 30,000</span>
-            </div>
-            <p class="menu-item-desc">Ground chicken, rich tomato gravy, fresh coriander leaves, served with warm flatbread</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Balsamic Beef Crostini</span>
-              <span class="menu-item-price">UGX 30,000</span>
-            </div>
-            <p class="menu-item-desc">Toasted bread, sliced beef fillet, herbed mozzarella, rocket leaves, aged balsamic reduction</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Soup of the Day</span>
-              <span class="menu-item-price">UGX 22,000</span>
-            </div>
-            <p class="menu-item-desc">Ask your server for today's seasonal selection, served with crusty artisan bread and butter</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Chicken Wings</span>
-              <span class="menu-item-price">UGX 35,000</span>
-            </div>
-            <p class="menu-item-desc">Crispy fried wings tossed in your choice of sauce: buffalo, honey garlic, or BBQ, with house dipping sauce</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Calamari Fritti</span>
-              <span class="menu-item-price">UGX 38,000</span>
-            </div>
-            <p class="menu-item-desc">Lightly breaded squid rings, lemon aioli, sriracha dipping sauce, fresh lemon wedge</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Bruschetta Al Pomodoro</span>
-              <span class="menu-item-price">UGX 24,000</span>
-            </div>
-            <p class="menu-item-desc">Grilled ciabatta, vine-ripened tomatoes, fresh basil, garlic, extra-virgin olive oil, Maldon salt</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mains -->
-      <div class="menu-panel" id="tab-mains">
-        <div class="menu-cols">
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Pan-Seared Beef Steak</span>
-              <span class="menu-item-price">UGX 45,000</span>
-            </div>
-            <p class="menu-item-desc">Pan-seared beef steak, rosemary, garlic jus, fried plantain — Stonehaven's signature main</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Atlantic Fillet of Salmon</span>
-              <span class="menu-item-price">UGX 55,000</span>
-            </div>
-            <p class="menu-item-desc">Pan-seared Atlantic salmon, wilted spinach, mashed potato, sautéed mushrooms, lemon beurre blanc</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Pan-Seared Tilapia on Pasta</span>
-              <span class="menu-item-price">UGX 45,000</span>
-            </div>
-            <p class="menu-item-desc">Lake Victoria tilapia, spaghetti, creamed tomato sauce, fresh Parmigiano-Reggiano, basil oil</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Pork Ribs</span>
-              <span class="menu-item-price">UGX 58,000</span>
-            </div>
-            <p class="menu-item-desc">Slow-cooked baby back ribs, house BBQ glaze, coleslaw, seasoned fries — falls off the bone</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Grilled Chicken Fillet</span>
-              <span class="menu-item-price">UGX 42,000</span>
-            </div>
-            <p class="menu-item-desc">Marinated grilled chicken breast, roasted vegetables, garlic mashed potato, herb jus</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Stonehaven Burger</span>
-              <span class="menu-item-price">UGX 36,000</span>
-            </div>
-            <p class="menu-item-desc">Beef patty, cheddar cheese, caramelised onions, lettuce, tomato, house sauce, toasted brioche bun, fries</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Margherita Pizza</span>
-              <span class="menu-item-price">UGX 38,000</span>
-            </div>
-            <p class="menu-item-desc">Stone-baked base, San Marzano tomato sauce, fresh mozzarella, basil, extra-virgin olive oil</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Garden Pasta Primavera</span>
-              <span class="menu-item-price">UGX 32,000</span>
-            </div>
-            <p class="menu-item-desc">Seasonal garden vegetables, penne, creamy white sauce, fresh parmesan, toasted pine nuts</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Salads -->
-      <div class="menu-panel" id="tab-salads">
-        <div class="menu-cols">
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Summer Corn &amp; Bacon Salad</span>
-              <span class="menu-item-price">UGX 45,000</span>
-            </div>
-            <p class="menu-item-desc">Crisp lettuce, streaky bacon, boiled eggs, avocado, sweet corn, cucumber, cherry tomatoes, fried beetroot, house dressing</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Classic Caesar Salad</span>
-              <span class="menu-item-price">UGX 32,000</span>
-            </div>
-            <p class="menu-item-desc">Cos lettuce, house Caesar dressing, crispy croutons, shaved Parmigiano, anchovies on request · Add chicken UGX 8,000</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Stonehaven Garden Salad</span>
-              <span class="menu-item-price">UGX 24,000</span>
-            </div>
-            <p class="menu-item-desc">Mixed greens, cucumber, tomato, red onion, olives, feta cheese, balsamic vinaigrette</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Grilled Halloumi Salad</span>
-              <span class="menu-item-price">UGX 36,000</span>
-            </div>
-            <p class="menu-item-desc">Grilled halloumi, rocket, roasted red peppers, sun-dried tomatoes, toasted walnuts, honey-lemon dressing</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Wines -->
-      <div class="menu-panel" id="tab-wines">
-        <p class="menu-panel-note reveal">Our cellar curates over 300 labels. Below is a selection — ask your sommelier for the full wine list.</p>
-        <div class="menu-cols">
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Château Margaux 2015</span>
-              <span class="menu-item-price">UGX 980,000</span>
-            </div>
-            <p class="menu-item-desc">Bordeaux, France · Cabernet Sauvignon blend · Full-bodied, blackcurrant, cedar, violet finish</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Opus One 2018</span>
-              <span class="menu-item-price">UGX 820,000</span>
-            </div>
-            <p class="menu-item-desc">Napa Valley, USA · Bordeaux blend · Dark fruit, dark chocolate, tobacco leaf, silky tannins</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Cloudy Bay Sauvignon Blanc</span>
-              <span class="menu-item-price">UGX 185,000</span>
-            </div>
-            <p class="menu-item-desc">Marlborough, NZ · Crisp citrus, passion fruit, cut grass, mineral finish · Pairs beautifully with seafood</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Ken Forrester Chenin Blanc</span>
-              <span class="menu-item-price">UGX 145,000</span>
-            </div>
-            <p class="menu-item-desc">Stellenbosch, South Africa · Honeyed stone fruit, quince, ginger spice, long finish</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Graham Beck Brut NV</span>
-              <span class="menu-item-price">UGX 165,000</span>
-            </div>
-            <p class="menu-item-desc">Robertson, South Africa · Méthode Cap Classique · Fine bubbles, green apple, brioche, elegant finish</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Mohua Pinot Noir</span>
-              <span class="menu-item-price">UGX 155,000</span>
-            </div>
-            <p class="menu-item-desc">Central Otago, NZ · Ruby red, wild cherry, plum, earthy undertones, silky tannins · Excellent with salmon</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Desserts -->
-      <div class="menu-panel" id="tab-desserts">
-        <div class="menu-cols">
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Orange &amp; Caramel Cheesecake</span>
-              <span class="menu-item-price">UGX 28,000</span>
-            </div>
-            <p class="menu-item-desc">Baked orange zest cheesecake, salted caramel drizzle, digestive biscuit base, vanilla cream</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Carrot Cake Ice Cream Square</span>
-              <span class="menu-item-price">UGX 26,000</span>
-            </div>
-            <p class="menu-item-desc">Moist carrot cake, cream cheese frosting, house-made ice cream, candied walnut crumble</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Warm Chocolate Brownie</span>
-              <span class="menu-item-price">UGX 24,000</span>
-            </div>
-            <p class="menu-item-desc">Fudgy dark chocolate brownie, Ugandan vanilla ice cream, hot fudge sauce, toasted hazelnuts</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Crème Brûlée</span>
-              <span class="menu-item-price">UGX 26,000</span>
-            </div>
-            <p class="menu-item-desc">Classic Tahitian vanilla custard, caramelised crust, fresh red berries, delicate shortbread finger</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Fresh Fruit Sorbet</span>
-              <span class="menu-item-price">UGX 18,000</span>
-            </div>
-            <p class="menu-item-desc">Three scoops of seasonal sorbet — passion fruit, mango, and lime — with candied mint</p>
-          </div>
-          <div class="menu-item reveal">
-            <div class="menu-item-top">
-              <span class="menu-item-name">Tiramisu</span>
-              <span class="menu-item-price">UGX 28,000</span>
-            </div>
-            <p class="menu-item-desc">Classic Italian tiramisu, espresso-soaked ladyfingers, mascarpone cream, cocoa dusting</p>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- /menu-panels -->
-
-    <div class="menu-footer reveal">
-      <a href="#reserve" class="btn btn-ghost">Reserve Your Table</a>
-    </div>
   </section>
 
 
   <!-- ============================================================
-       GALLERY
+       IMAGE STRIP — Horizontal visual showcase
   ============================================================ -->
-  <section id="gallery" class="section-gallery">
-    <div class="gallery-header reveal">
+  <section id="image-strip" class="section-image-strip">
+    <div class="strip-header reveal">
       <p class="eyebrow">Captured Moments</p>
       <h2 class="section-title">Inside Stonehaven</h2>
     </div>
 
-    <div class="gallery-grid">
-      <div class="gallery-item reveal" style="--delay:0s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-21.png" alt="Stonehaven dining area" />
-        <div class="gallery-overlay"><span>The Dining Room</span></div>
+    <div class="image-strip">
+      <div class="strip-item reveal">
+        <img src="BBQ.png" alt="BBQ at Stonehaven" />
+        <div class="strip-overlay"><span>BBQ Fridays</span></div>
       </div>
-      <div class="gallery-item reveal tall" style="--delay:.1s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-22.png" alt="Stonehaven wine cellar" />
-        <div class="gallery-overlay"><span>The Cellar</span></div>
+      <div class="strip-item reveal">
+        <img src="breakfast.png" alt="Stonehaven breakfast spread" />
+        <div class="strip-overlay"><span>Breakfast</span></div>
       </div>
-      <div class="gallery-item reveal" style="--delay:.2s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-6.png" alt="Stonehaven plated dish" />
-        <div class="gallery-overlay"><span>The Kitchen</span></div>
+      <div class="strip-item reveal">
+        <img src="Dessert_.png" alt="Stonehaven dessert" />
+        <div class="strip-overlay"><span>Desserts</span></div>
       </div>
-      <div class="gallery-item reveal wide" style="--delay:.3s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-20.png" alt="Stonehaven garden lounge" />
-        <div class="gallery-overlay"><span>The Garden Lounge</span></div>
+      <div class="strip-item reveal">
+        <img src="More_chicken_.png" alt="Stonehaven chicken dish" />
+        <div class="strip-overlay"><span>Mains</span></div>
       </div>
-      <div class="gallery-item reveal" style="--delay:.4s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-26.png" alt="Stonehaven bar" />
-        <div class="gallery-overlay"><span>The Bar</span></div>
+      <div class="strip-item reveal">
+        <img src="grape_cocktail.png" alt="Stonehaven cocktails" />
+        <div class="strip-overlay"><span>The Bar</span></div>
       </div>
-      <div class="gallery-item reveal" style="--delay:.5s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-38.png" alt="Stonehaven food" />
-        <div class="gallery-overlay"><span>The Plate</span></div>
+      <div class="strip-item reveal">
+        <img src="Lunch_.png" alt="Stonehaven lunch" />
+        <div class="strip-overlay"><span>Lunch</span></div>
       </div>
-      <!-- Additional gallery images -->
-      <div class="gallery-item reveal tall" style="--delay:.6s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-41-640x800.png" alt="Stonehaven evening ambiance" />
-        <div class="gallery-overlay"><span>Evening Ambiance</span></div>
+      <div class="strip-item reveal">
+        <img src="More_cocktails.png" alt="Stonehaven cocktail selection" />
+        <div class="strip-overlay"><span>Cocktails</span></div>
       </div>
-      <div class="gallery-item reveal" style="--delay:.7s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-43.png" alt="Stonehaven garden terrace" />
-        <div class="gallery-overlay"><span>The Terrace</span></div>
-      </div>
-      <div class="gallery-item reveal wide" style="--delay:.8s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-44-640x800.png" alt="Stonehaven private dining" />
-        <div class="gallery-overlay"><span>Private Dining</span></div>
-      </div>
-      <div class="gallery-item reveal" style="--delay:.9s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-12-640x800.png" alt="Stonehaven cocktails" />
-        <div class="gallery-overlay"><span>Crafted Cocktails</span></div>
-      </div>
-      <div class="gallery-item reveal" style="--delay:1s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-8.png" alt="Stonehaven brunch" />
-        <div class="gallery-overlay"><span>Bottomless Brunch</span></div>
-      </div>
-      <div class="gallery-item reveal" style="--delay:1.1s">
-        <img src="https://placelisted.com/wp-content/uploads/job-manager-uploads/main_image/2025/07/Stonehaven-Restaurant-Kampala-32.png" alt="Stonehaven outdoor seating" />
-        <div class="gallery-overlay"><span>Al Fresco Dining</span></div>
+      <div class="strip-item reveal">
+        <img src="MoreFood.png" alt="More Stonehaven dishes" />
+        <div class="strip-overlay"><span>Chef's Table</span></div>
       </div>
     </div>
 
-    <div class="gallery-footer reveal">
-      <a href="https://instagram.com/stonehavenkla" target="_blank" class="btn btn-ghost">View More on Instagram</a>
+    <div class="strip-footer reveal">
+      <a href="gallery.html" class="btn btn-ghost">View Full Gallery</a>
     </div>
   </section>
 
 
   <!-- ============================================================
-       RESERVATION
+       VISIT OUR RESTAURANT — Location, phone, email, map
   ============================================================ -->
-  <section id="reserve" class="section-reserve">
-    <div class="reserve-grid">
+  <section id="visit" class="section-visit">
+    <div class="visit-inner">
 
-      <!-- Left panel -->
-      <div class="reserve-info reveal">
-        <p class="eyebrow eyebrow--light">Book Your Evening</p>
-        <h2 class="section-title section-title--light">
-          Reserve<br /><em>Your Table</em>
-        </h2>
-        <p class="body-text body-text--light">
-          Every reservation at Stonehaven is a promise — an evening composed
-          around you. Our maître d' team ensures every detail exceeds expectation.
-        </p>
-        <div class="reserve-hours">
-          <div class="hours-row">
-            <span>Monday – Sunday</span>
-            <span>8:00 – 23:00</span>
+      <div class="visit-info reveal">
+        <p class="eyebrow">Find Us</p>
+        <h2 class="section-title">Visit Our Restaurant</h2>
+
+        <div class="visit-details">
+          <div class="visit-detail-item">
+            <div class="visit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <address>8 Malcolm X Avenue, Kololo<br />Kampala, Uganda</address>
+            </div>
+          </div>
+
+          <div class="visit-detail-item">
+            <div class="visit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+256709342064">+256 709 342 064</a></p>
+            </div>
+          </div>
+
+          <div class="visit-detail-item">
+            <div class="visit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:hello@stonehaven.ug">hello@stonehaven.ug</a></p>
+            </div>
+          </div>
+
+          <div class="visit-detail-item">
+            <div class="visit-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+            </div>
+            <div>
+              <h4>Opening Hours</h4>
+              <p>Monday – Sunday<br />8:00 AM – 11:00 PM</p>
+            </div>
           </div>
         </div>
-        <p class="reserve-contact">
-          <a href="tel:+256709342064">+256 709 342 064</a><br />
-          <a href="mailto:reservations@stonehaven.ug">reservations@stonehaven.ug</a>
-        </p>
       </div>
 
-      <!-- Form -->
-      <div class="reserve-form-wrap reveal">
-        <form id="reservationForm" novalidate>
-          <div class="form-group">
-            <label for="res-name">Full Name</label>
-            <input type="text" id="res-name" name="name" placeholder="Your name" autocomplete="name" />
-            <span class="form-error" id="err-name"></span>
-          </div>
-          <div class="form-group">
-            <label for="res-email">Email Address</label>
-            <input type="email" id="res-email" name="email" placeholder="your@email.com" autocomplete="email" />
-            <span class="form-error" id="err-email"></span>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="res-date">Date</label>
-              <input type="date" id="res-date" name="date" />
-              <span class="form-error" id="err-date"></span>
-            </div>
-            <div class="form-group">
-              <label for="res-time">Time</label>
-              <select id="res-time" name="time">
-                <option value="">Select time</option>
-                <option>12:00</option><option>12:30</option>
-                <option>13:00</option><option>13:30</option>
-                <option>18:00</option><option>18:30</option>
-                <option>19:00</option><option>19:30</option>
-                <option>20:00</option><option>20:30</option>
-                <option>21:00</option>
-              </select>
-              <span class="form-error" id="err-time"></span>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="res-guests">Number of Guests</label>
-            <select id="res-guests" name="guests">
-              <option value="">Select guests</option>
-              <option>1 Guest</option><option>2 Guests</option>
-              <option>3 Guests</option><option>4 Guests</option>
-              <option>5 Guests</option><option>6 Guests</option>
-              <option>7+ Guests (call us)</option>
-            </select>
-            <span class="form-error" id="err-guests"></span>
-          </div>
-          <div class="form-group">
-            <label for="res-notes">Special Requests</label>
-            <textarea id="res-notes" name="notes" placeholder="Dietary requirements, celebrations, seating preferences…" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-solid btn--full">Confirm Reservation</button>
-          <div class="form-success" id="formSuccess">
-            ✦ &nbsp;Your reservation request has been received. We will confirm within 2 hours.
-          </div>
-        </form>
+      <!-- Map embed -->
+      <div class="visit-map reveal">
+        <iframe
+          title="Stonehaven Restaurant location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.757!2d32.6002130!3d0.3307519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbb8b11e79fd7%3A0xabb8ea23d2a5e22!2sStonehaven%20Restaurant%20%26%20Winery!5e0!3m2!1sen!2sug!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
 
     </div>
@@ -632,7 +379,7 @@
 
         <div class="testimonial-slide">
           <blockquote>
-            "One of the most upscale restaurants in Kampala. Great environment, with a pretty garden in the middle. Nice lighting, plenty of seatings, attentive service. Impressive presentation of dishes. Quality meat."
+            "One of the most upscale restaurants in Kampala. Great environment, with a pretty garden in the middle. Nice lighting, plenty of seatings, attentive service. Impressive presentation of dishes."
           </blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">K</div>
@@ -677,37 +424,7 @@
 
         <div class="testimonial-slide">
           <blockquote>
-            "A cozy place to dine, have tea, hold a business meeting and more — all while enjoying the fresh air of Kololo! Very friendly staff and well informed about the services offered. Beautiful scenery and good music."
-          </blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">G</div>
-            <div>
-              <strong>Google Reviewer</strong>
-              <span>Kampala, Uganda</span>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <a href="https://www.google.com/maps/place/Stonehaven+Restaurant+%26+Winery/@0.3307519,32.6002130,17z" target="_blank" rel="noopener" class="review-link">Read on Google Maps ↗</a>
-        </div>
-
-        <div class="testimonial-slide">
-          <blockquote>
-            "Excellent restaurant all around. Good location in Kololo, a nice place, with good service and excellent food. I went there several times with friends and colleagues and every time the unanimous opinion was that the food was excellent."
-          </blockquote>
-          <div class="testimonial-author">
-            <div class="author-avatar">T</div>
-            <div>
-              <strong>TripAdvisor Guest</strong>
-              <span>Kampala</span>
-            </div>
-          </div>
-          <div class="testimonial-stars">★★★★★</div>
-          <a href="https://www.tripadvisor.com/Restaurant_Review-g293841-d23449360-Reviews-Stonehaven_Restaurant_Winery-Kampala_Central_Region.html" target="_blank" rel="noopener" class="review-link">Read on TripAdvisor ↗</a>
-        </div>
-
-        <div class="testimonial-slide">
-          <blockquote>
-            "Stonehaven is a design masterpiece with an inviting layout, beautiful ambience, and delicious food cooked by professional chefs. The staff treats guests like royalty, the toilets are sparkling clean, and the décor is stunning."
+            "Stonehaven is a design masterpiece with an inviting layout, beautiful ambience, and delicious food cooked by professional chefs. The staff treats guests like royalty."
           </blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">W</div>
@@ -718,6 +435,21 @@
           </div>
           <div class="testimonial-stars">★★★★★</div>
           <a href="https://app.wanderlog.com/place/details/3777015" target="_blank" rel="noopener" class="review-link">Read on Wanderlog ↗</a>
+        </div>
+
+        <div class="testimonial-slide">
+          <blockquote>
+            "Excellent restaurant all around. Good location in Kololo, a nice place, with good service and excellent food. Every time the unanimous opinion was that the food was excellent."
+          </blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">T</div>
+            <div>
+              <strong>TripAdvisor Guest</strong>
+              <span>Kampala</span>
+            </div>
+          </div>
+          <div class="testimonial-stars">★★★★★</div>
+          <a href="https://www.tripadvisor.com/Restaurant_Review-g293841-d23449360-Reviews-Stonehaven_Restaurant_Winery-Kampala_Central_Region.html" target="_blank" rel="noopener" class="review-link">Read on TripAdvisor ↗</a>
         </div>
 
       </div><!-- /track -->
@@ -733,6 +465,102 @@
 
 
   <!-- ============================================================
+       BOOK A TABLE — Full-width BG image + form overlay (last section)
+  ============================================================ -->
+  <section id="reserve" class="section-reserve">
+
+    <!-- Full-width background image -->
+    <div class="reserve-bg">
+      <img src="ambiance_.png" alt="Stonehaven restaurant ambiance" />
+      <div class="reserve-bg-overlay"></div>
+    </div>
+
+    <div class="reserve-inner">
+
+      <div class="reserve-info reveal">
+        <p class="eyebrow eyebrow--light">Book Your Evening</p>
+        <h2 class="section-title section-title--light">
+          Reserve<br /><em>Your Table</em>
+        </h2>
+        <p class="body-text body-text--light">
+          Every reservation at Stonehaven is a promise — an evening composed
+          around you. Our maître d' team ensures every detail exceeds expectation.
+        </p>
+        <div class="reserve-hours">
+          <div class="hours-row">
+            <span>Monday – Sunday</span>
+            <span>8:00 – 23:00</span>
+          </div>
+        </div>
+        <p class="reserve-contact">
+          <a href="tel:+256709342064">+256 709 342 064</a><br />
+          <a href="mailto:reservations@stonehaven.ug">reservations@stonehaven.ug</a>
+        </p>
+      </div>
+
+      <!-- Form -->
+      <div class="reserve-form-wrap reveal">
+        <form id="reservationForm" novalidate>
+          <div class="form-group">
+            <label for="res-name">Full Name</label>
+            <input type="text" id="res-name" name="name" placeholder="Your name" autocomplete="name" />
+            <span class="form-error" id="err-name"></span>
+          </div>
+          <div class="form-group">
+            <label for="res-email">Email Address</label>
+            <input type="email" id="res-email" name="email" placeholder="your@email.com" autocomplete="email" />
+            <span class="form-error" id="err-email"></span>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date">Date</label>
+              <input type="date" id="res-date" name="date" />
+              <span class="form-error" id="err-date"></span>
+            </div>
+            <div class="form-group">
+              <label for="res-time">Time</label>
+              <select id="res-time" name="time">
+                <option value="">Select time</option>
+                <option>08:00</option><option>08:30</option>
+                <option>09:00</option><option>09:30</option>
+                <option>10:00</option><option>10:30</option>
+                <option>12:00</option><option>12:30</option>
+                <option>13:00</option><option>13:30</option>
+                <option>18:00</option><option>18:30</option>
+                <option>19:00</option><option>19:30</option>
+                <option>20:00</option><option>20:30</option>
+                <option>21:00</option>
+              </select>
+              <span class="form-error" id="err-time"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="res-guests">Number of Guests</label>
+            <select id="res-guests" name="guests">
+              <option value="">Select guests</option>
+              <option>1 Guest</option><option>2 Guests</option>
+              <option>3 Guests</option><option>4 Guests</option>
+              <option>5 Guests</option><option>6 Guests</option>
+              <option>7+ Guests (call us)</option>
+            </select>
+            <span class="form-error" id="err-guests"></span>
+          </div>
+          <div class="form-group">
+            <label for="res-notes">Special Requests</label>
+            <textarea id="res-notes" name="notes" placeholder="Dietary requirements, celebrations, seating preferences…" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid btn--full">Confirm Reservation</button>
+          <div class="form-success" id="formSuccess">
+            ✦ &nbsp;Your reservation request has been received. We will confirm within 2 hours.
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
        FOOTER
   ============================================================ -->
   <footer id="footer">
@@ -740,7 +568,7 @@
       <div class="footer-brand">
         <div class="footer-logo-wrap">
           <img src="logo.png" alt="Stonehaven logo" class="footer-logo-img" />
-          <span class="footer-logo">STONEHAVEN</span>
+          <span class="footer-logo">Stonehaven</span>
         </div>
         <p class="footer-tagline">Restaurant &amp; Winery · Kampala</p>
       </div>
@@ -748,7 +576,7 @@
       <nav class="footer-nav">
         <a href="#about">About</a>
         <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
+        <a href="gallery.html">Gallery</a>
         <a href="#reserve">Reservations</a>
       </nav>
 

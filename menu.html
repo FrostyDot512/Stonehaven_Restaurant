@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Menu — Stonehaven Restaurant & Winery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/x-icon" href="logo.png" />
+  <style>
+    .menu-page-hero {
+      min-height: 38vh;
+      background: var(--charcoal-deep);
+      display: flex;
+      align-items: flex-end;
+      padding: 0 40px 60px;
+      border-bottom: 1px solid rgba(170,138,76,0.2);
+    }
+    .menu-page-hero-inner { max-width: 1280px; margin: 0 auto; width: 100%; padding-top: var(--nav-h); }
+    .menu-full-section { padding: 80px 0 120px; background: var(--charcoal); }
+    .menu-full-inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; }
+    .menu-category { margin-bottom: 72px; }
+    .menu-category-title {
+      font-family: var(--cinzel);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      padding-bottom: 20px;
+      border-bottom: 1px solid rgba(170,138,76,0.3);
+      margin-bottom: 4px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      transition: color 0.3s;
+    }
+    .back-link:hover { color: var(--gold-light); }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" class="scrolled">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="Stonehaven logo" class="nav-logo-img" />
+        <span class="nav-brand-name">Stonehaven</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#visit">Visit</a></li>
+        <li><a href="index.html#reserve" class="nav-cta">Book a Table</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <div class="menu-page-hero">
+    <div class="menu-page-hero-inner">
+      <a href="index.html" class="back-link">← Back to Home</a>
+      <p class="eyebrow eyebrow--light">Seasonal Offerings</p>
+      <h1 class="section-title section-title--light">The Full Menu</h1>
+    </div>
+  </div>
+
+  <section class="menu-full-section">
+    <div class="menu-full-inner">
+
+      <!-- FOOD PHOTO BANNER -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:60px;border-radius:4px;overflow:hidden;">
+        <img src="Dessert_.png"        alt="Stonehaven dessert"   style="width:100%;height:180px;object-fit:cover;" />
+        <img src="Lunch_.png"          alt="Stonehaven lunch"     style="width:100%;height:180px;object-fit:cover;" />
+        <img src="More_chicken_.png"   alt="Stonehaven chicken"   style="width:100%;height:180px;object-fit:cover;" />
+        <img src="grape_cocktail.png"  alt="Stonehaven cocktail"  style="width:100%;height:180px;object-fit:cover;" />
+      </div>
+
+      <!-- BREAKFAST -->
+      <div class="menu-category">
+        <p class="menu-category-title">Breakfast · Served daily 8:00 – 12:00</p>
+        <div class="menu-cols">
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">American Breakfast</span><span class="menu-item-price">UGX 40,000</span></div><p class="menu-item-desc">Eggs of your choice, sausage or mini steak, baked beans, potatoes, mushrooms, pancake or bread, fruits &amp; juice, tea or coffee</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">English Breakfast</span><span class="menu-item-price">UGX 38,000</span></div><p class="menu-item-desc">Eggs of your choice, baked beans, sausages, bacon, grilled tomato, mushroom, bread, fruits, tea or coffee</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Piato Burrito</span><span class="menu-item-price">UGX 30,000</span></div><p class="menu-item-desc">Eggs, avocado, sausages, spinach, tomato and mayonnaise, served with home fries</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Chef's Combo</span><span class="menu-item-price">UGX 35,000</span></div><p class="menu-item-desc">Chicken tenders, spinach, grilled tomato, mushrooms, potatoes, avocado, pancake, juice &amp; black coffee</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">The Vegetarian Combo</span><span class="menu-item-price">UGX 30,000</span></div><p class="menu-item-desc">Vegetable omelette, hash brown potatoes, spinach, mushrooms, grilled tomato, baked beans</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Eggs Benedict</span><span class="menu-item-price">UGX 32,000</span></div><p class="menu-item-desc">Poached eggs, Canadian bacon, toasted English muffin, house hollandaise sauce</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">French Toast</span><span class="menu-item-price">UGX 26,000</span></div><p class="menu-item-desc">Thick-cut brioche, maple syrup, whipped cream, fresh berries, icing sugar</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Avocado Toast</span><span class="menu-item-price">UGX 28,000</span></div><p class="menu-item-desc">Smashed avocado, poached egg, cherry tomatoes, micro herbs, chilli flakes, sourdough</p></div>
+        </div>
+      </div>
+
+      <!-- STARTERS -->
+      <div class="menu-category">
+        <p class="menu-category-title">Starters</p>
+        <div class="menu-cols">
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Butter Chicken Meatballs</span><span class="menu-item-price">UGX 30,000</span></div><p class="menu-item-desc">Ground chicken, rich tomato gravy, fresh coriander leaves, served with warm flatbread</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Balsamic Beef Crostini</span><span class="menu-item-price">UGX 30,000</span></div><p class="menu-item-desc">Toasted bread, sliced beef fillet, herbed mozzarella, rocket leaves, aged balsamic reduction</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Soup of the Day</span><span class="menu-item-price">UGX 22,000</span></div><p class="menu-item-desc">Ask your server for today's seasonal selection, served with crusty artisan bread and butter</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Chicken Wings</span><span class="menu-item-price">UGX 35,000</span></div><p class="menu-item-desc">Crispy fried wings in your choice of sauce: buffalo, honey garlic, or BBQ, with house dipping sauce</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Calamari Fritti</span><span class="menu-item-price">UGX 38,000</span></div><p class="menu-item-desc">Lightly breaded squid rings, lemon aioli, sriracha dipping sauce, fresh lemon wedge</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Bruschetta Al Pomodoro</span><span class="menu-item-price">UGX 24,000</span></div><p class="menu-item-desc">Grilled ciabatta, vine-ripened tomatoes, fresh basil, garlic, extra-virgin olive oil, Maldon salt</p></div>
+        </div>
+      </div>
+
+      <!-- MAIN COURSES -->
+      <div class="menu-category">
+        <p class="menu-category-title">Main Courses</p>
+        <div class="menu-cols">
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Pan-Seared Beef Steak</span><span class="menu-item-price">UGX 45,000</span></div><p class="menu-item-desc">Pan-seared beef steak, rosemary, garlic jus, fried plantain — Stonehaven's signature main</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Atlantic Fillet of Salmon</span><span class="menu-item-price">UGX 55,000</span></div><p class="menu-item-desc">Pan-seared Atlantic salmon, wilted spinach, mashed potato, sautéed mushrooms, lemon beurre blanc</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Pan-Seared Tilapia on Pasta</span><span class="menu-item-price">UGX 45,000</span></div><p class="menu-item-desc">Lake Victoria tilapia, spaghetti, creamed tomato sauce, fresh Parmigiano-Reggiano, basil oil</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Pork Ribs</span><span class="menu-item-price">UGX 58,000</span></div><p class="menu-item-desc">Slow-cooked baby back ribs, house BBQ glaze, coleslaw, seasoned fries — falls off the bone</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Grilled Chicken Fillet</span><span class="menu-item-price">UGX 42,000</span></div><p class="menu-item-desc">Marinated grilled chicken breast, roasted vegetables, garlic mashed potato, herb jus</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Stonehaven Burger</span><span class="menu-item-price">UGX 36,000</span></div><p class="menu-item-desc">Beef patty, cheddar cheese, caramelised onions, lettuce, tomato, house sauce, toasted brioche bun, fries</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Margherita Pizza</span><span class="menu-item-price">UGX 38,000</span></div><p class="menu-item-desc">Stone-baked base, San Marzano tomato sauce, fresh mozzarella, basil, extra-virgin olive oil</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Garden Pasta Primavera</span><span class="menu-item-price">UGX 32,000</span></div><p class="menu-item-desc">Seasonal garden vegetables, penne, creamy white sauce, fresh parmesan, toasted pine nuts</p></div>
+        </div>
+      </div>
+
+      <!-- VISUAL BREAK -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:60px;border-radius:4px;overflow:hidden;">
+        <img src="Mash_up.png"           alt="Stonehaven mash dish"    style="width:100%;height:220px;object-fit:cover;" />
+        <img src="More_food_images.png"  alt="Stonehaven food"         style="width:100%;height:220px;object-fit:cover;" />
+        <img src="More_cocktails.png"    alt="Stonehaven cocktails"    style="width:100%;height:220px;object-fit:cover;" />
+      </div>
+
+      <!-- SALADS -->
+      <div class="menu-category">
+        <p class="menu-category-title">Salads</p>
+        <div class="menu-cols">
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Summer Corn &amp; Bacon Salad</span><span class="menu-item-price">UGX 45,000</span></div><p class="menu-item-desc">Crisp lettuce, streaky bacon, boiled eggs, avocado, sweet corn, cucumber, cherry tomatoes, fried beetroot, house dressing</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Classic Caesar Salad</span><span class="menu-item-price">UGX 32,000</span></div><p class="menu-item-desc">Cos lettuce, house Caesar dressing, crispy croutons, shaved Parmigiano, anchovies on request · Add chicken UGX 8,000</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Stonehaven Garden Salad</span><span class="menu-item-price">UGX 28,000</span></div><p class="menu-item-desc">Mixed greens, heirloom tomatoes, cucumber, radish, carrot, feta, house vinaigrette</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Grilled Halloumi Salad</span><span class="menu-item-price">UGX 36,000</span></div><p class="menu-item-desc">Grilled halloumi, roasted peppers, rocket, pomegranate, toasted walnuts, balsamic glaze</p></div>
+        </div>
+      </div>
+
+      <!-- DESSERTS -->
+      <div class="menu-category">
+        <p class="menu-category-title">Desserts</p>
+        <div class="menu-cols">
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Banana Split</span><span class="menu-item-price">UGX 26,000</span></div><p class="menu-item-desc">Fresh banana, two scoops ice cream, chocolate sauce, rainbow sprinkles, red grapes, fresh mint</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Chocolate Lava Cupcake</span><span class="menu-item-price">UGX 24,000</span></div><p class="menu-item-desc">Warm chocolate cake, orange buttercream, fresh strawberry, gold pearl décor</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Crème Brûlée</span><span class="menu-item-price">UGX 28,000</span></div><p class="menu-item-desc">Classic vanilla custard, caramelised sugar crust, seasonal berries</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Tiramisu</span><span class="menu-item-price">UGX 26,000</span></div><p class="menu-item-desc">Espresso-soaked ladyfingers, mascarpone cream, dusted cocoa</p></div>
+        </div>
+      </div>
+
+      <!-- WINES & COCKTAILS -->
+      <div class="menu-category">
+        <p class="menu-category-title">Wines &amp; Cocktails</p>
+        <div class="menu-cols">
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">House Red Wine</span><span class="menu-item-price">UGX 22,000 / glass</span></div><p class="menu-item-desc">Curated South African red — bold and fruit-forward, ask your sommelier for the bottle selection</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">House White Wine</span><span class="menu-item-price">UGX 22,000 / glass</span></div><p class="menu-item-desc">Crisp, dry white — pairs beautifully with our seafood dishes</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Stonehaven Sangria</span><span class="menu-item-price">UGX 30,000</span></div><p class="menu-item-desc">House red wine, fresh strawberries, grapes, seasonal fruit, lightly sweetened</p></div>
+          <div class="menu-item"><div class="menu-item-top"><span class="menu-item-name">Craft Cocktails</span><span class="menu-item-price">From UGX 28,000</span></div><p class="menu-item-desc">Speak to your bartender for our seasonal cocktail list — crafted fresh daily</p></div>
+        </div>
+      </div>
+
+      <!-- FINAL VISUAL -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:48px;border-radius:4px;overflow:hidden;">
+        <img src="more_gallery_imgaes.png" alt="Stonehaven atmosphere" style="width:100%;height:240px;object-fit:cover;" />
+        <img src="MoreFood.png"            alt="Stonehaven dishes"     style="width:100%;height:240px;object-fit:cover;" />
+      </div>
+
+      <div style="text-align:center; padding-top:20px;">
+        <a href="index.html#reserve" class="btn btn-solid">Reserve Your Table</a>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
